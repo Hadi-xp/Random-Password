@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(6, 102, 86);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+*{
+    font-family: Poppins;
+    font-weight: 300;
+}
+.container{
+    background-color: #fff;
+    max-width: 400px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.container h1{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.container h1::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: rgb(6, 102, 86);
+}
