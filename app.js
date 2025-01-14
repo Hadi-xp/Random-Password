@@ -6,12 +6,12 @@ const copy = document.querySelector(".copy");
 const btn = document.querySelector(".btn");
 const resultEl = document.querySelector(".result");
 //Length of paaword
-const length = 12;
+const lengthLimit = 12;
 //Passwords characters
-const Numbers = '0123456789';
-const Uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const Lowercase = 'abcdefghijklmnopqrstuvwxyz';
-const Symbols = '!@#$%^&*()_+-=[]{}|;:,.<>?';
+const numbers = '0123456789';
+const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const lowercase = 'abcdefghijklmnopqrstuvwxyz';
+const symbols = '!@#$%^&*()_+-=[]{}|;:,.<>?';
 
 
 //Function
@@ -19,9 +19,9 @@ function generatePassword() {
     //first we create a variable for our password
     let Password = "";
     //now we need to combine all characters
-    const allChars = Numbers + Uppercase + Lowercase + Symbols;
+    const allChars = numbers + uppercase + lowercase + symbols;
     //we use a while loop here to generate a random password until it reaches the desired length
-    while(Password.length < length) {
+    while(Password.length < lengthLimit) {
         //here i used math.floor and math.random to pick a random character and add it to the password
         Password += allChars[Math.floor(Math.random() * allChars.length)];
     }
